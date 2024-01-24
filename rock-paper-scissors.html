@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <div onclick="playgame('rock');"><img class="rock" src="rock.png" alt="" ></div>
+  <div onclick="playgame('paper');" ><img class="paper" src="paper.png" alt=""></div>
+  <div onclick="playgame('scissors');" ><img class="scissors" src="scissors.png" alt=""></div>
+  <h2 class="result"></h2>
+  <p class="moves"></p>
+  <p class="scores"></p>
+  <button onclick="
+    score.wins = 0;
+    score.draws = 0;
+    score.losses = 0;
+    document.querySelector('.scores').innerHTML=`Wins: ${score.wins}, losses: ${score.losses}, draws: ${score.draws}`;
+    localStorage.setItem('score',JSON.stringify(score));
+  ">reset score</button>
+
+  <script src="code.js"></script>
+</body>
+</html>
